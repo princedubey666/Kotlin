@@ -1,15 +1,23 @@
 fun main() {
     println("Enter the index: ")
+
+    //Taking input and Using Null feature for Null safety
     val input = readln().toIntOrNull()?:0
+
+// Declaring an array
+    
     val numbs = intArrayOf(1, 9, 2, 8) + 3
     println("Array before adding a number: ${numbs.contentToString()} ")
     val replacedValue = numbs[input]
     print("Enter number to replace at index $input: ")
     val value = readln().toIntOrNull()?:0
+
+    //Assigning value 
     numbs[input] = value
 
     println("Array after replacing: ${numbs.contentToString()}")
-
+    
+//Conditional Statement to make decision
     if (input in 0..numbs.lastIndex){
         println("$replacedValue is replaced with ${numbs[input]}. \n")
     }
